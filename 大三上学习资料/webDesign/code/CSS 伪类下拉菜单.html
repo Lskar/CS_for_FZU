@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu Example</title>
+    <style>
+        /* 基本样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 下拉菜单样式 */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: rgb(255, 0, 0);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #00ff44;
+        }
+
+        /* 下拉菜单激活状态 */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dropdown">
+        <span>Hover me</span>
+        <div class="dropdown-content">
+            <a href="#">Option 1</a>
+            <a href="#">Option 2</a>
+            <a href="#">Option 3</a>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript 事件处理
+        var dropdownContent = document.querySelector('.dropdown-content');
+
+        dropdownContent.addEventListener('click', function (event) {
+            var selectedOption = event.target.textContent;
+            alert('Selected option: ' + selectedOption);
+        });
+    </script>
+
+</body>
+</html>

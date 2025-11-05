@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getComputedStyle Example</title>
+    <style>
+        #exampleElement {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 20px;
+            padding: 10px;
+            border: 2px solid navy;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="exampleElement">This is a sample element.</div>
+
+    <script>
+        // 获取要操作的元素
+        var exampleElement = document.getElementById("exampleElement");
+
+        // 使用 getComputedStyle 获取计算得到的样式
+        var computedStyles = window.getComputedStyle(exampleElement);
+
+        // 输出计算得到的样式结果
+        console.log("Calculated Styles:", computedStyles);
+
+        // 访问特定样式属性
+        var width = computedStyles.width;
+        var height = computedStyles.height;
+        var backgroundColor = computedStyles.backgroundColor;
+        var marginTop = computedStyles.marginTop;
+        var padding = computedStyles.padding;
+
+        // 输出访问的样式属性
+        console.log("Width:", width);
+        console.log("Height:", height);
+        console.log("Background Color:", backgroundColor);
+        console.log("Margin Top:", marginTop);
+        console.log("Padding:", padding);
+    </script>
+
+</body>
+</html>

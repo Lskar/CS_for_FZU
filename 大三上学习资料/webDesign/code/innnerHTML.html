@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML Example</title>
+</head>
+<body>
+
+    <div id="content">
+        <p>This is a paragraph with <strong>strong</strong> emphasis.</p>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+
+    <script>
+        // 获取包含内容的元素
+        var contentElement = document.getElementById("content");
+
+        // 获取并输出元素内部的 HTML 内容
+        var innerHTMLContent = contentElement.innerHTML;
+        console.log("Original innerHTML:", innerHTMLContent);
+
+        // 修改元素内部的 HTML 内容
+        //contentElement.innerHTML = "<p>This is the new content.</p>";
+
+        // 通过 innerHTML 添加新元素
+        //contentElement.innerHTML += "<div>Added div element</div>";
+
+        // 通过 innerHTML 移除元素内部的子元素
+        var ulElement = contentElement.querySelector("ul");
+        ulElement.innerHTML = "";
+
+        // 输出修改后的 innerHTML
+        console.log("Modified innerHTML:", contentElement.innerHTML);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog System—注册</title>
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            width: auto;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 16px;
+            color: #777;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <!-- register.html -->
+    <script>
+        function notifyRegistrationSuccess() {
+            // 在这里执行注册成功后的操作，例如跳转或其他处理
+            // 你可以根据需要修改这里的逻辑
+            window.location.href = 'login.html';
+        }
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <form action="register_process.php" method="post">
+            <h1>注册</h1>
+
+            <label for="username">用户名:</label>
+            <input type="text" id="username" name="username" required />
+
+            <label for="password">密码:</label>
+            <input type="password" id="password" name="password" required />
+
+            <label for="confirm_password">确认密码:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required />
+
+            <br />
+            <input type="submit" value="注册" />
+        </form>
+
+        <p>已有账户？<a href="login.html">登录</a></p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Example</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <script>
+        // 获取要操作的列表元素
+        var myList = document.getElementById("myList");
+
+        // 创建新的列表项元素
+        var newItem = document.createElement("li");
+        newItem.textContent = "New Item";
+
+        // 创建文本节点
+        var textNode = document.createTextNode("Another New Item");
+
+        // 在第一个列表项之前插入新的列表项
+         myList.insertBefore(newItem, myList.firstChild);
+
+        // // 在最后追加一个文本节点
+         myList.appendChild(textNode);
+
+        // // 替换第二个列表项
+        var replaceItem = document.createElement("li");
+        replaceItem.textContent = "Replaced Item";
+         myList.replaceChild(replaceItem, myList.children[1]);
+
+        // // 移除第三个列表项
+         var removedItem = myList.removeChild(myList.children[2]);
+
+        // // 输出最终的列表内容
+         console.log("Final List:", myList.outerHTML);
+         console.log("Final List:", myList.innerHTML);
+    </script>
+
+</body>
+</html>

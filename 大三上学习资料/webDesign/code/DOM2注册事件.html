@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling Example</title>
+    <style>
+        #somewhere {
+            padding: 20px;
+            background-color: lightblue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="somewhere">Click me!</div>
+
+    <script>
+        // 获取要操作的元素
+        var x = document.getElementById('somewhere');
+
+        // 使用 W3C 的 addEventListener（支持现代浏览器）
+        if (x.addEventListener) {
+            x.addEventListener('click', handleEvent, false);
+        }
+        // 使用 Microsoft 的 attachEvent（支持 IE8 及之前的版本）
+        else if (x.attachEvent) {
+            x.attachEvent('onclick', handleEvent);
+        }
+
+        // 定义事件处理函数
+        function handleEvent(e) {
+            // 使用 W3C 标准方式获取事件对象
+            var evt = e || window.event;
+
+            // 在控制台输出事件对象的信息
+            console.log("Event Type:", evt.type);
+            console.log("Client X:", evt.clientX);
+            console.log("Client Y:", evt.clientY);
+
+            // 在这里可以执行其他处理事件的操作
+        }
+    </script>
+
+</body>
+</html>

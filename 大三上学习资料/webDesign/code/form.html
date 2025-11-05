@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Example</title>
+</head>
+<body>
+
+<h2>HTML Form Example</h2>
+
+<form action="/submit" method="POST">
+    <!-- 文本框 -->
+    <label for="text">Text Input:</label>
+    <input type="text" id="text" name="text">
+    
+    <br>
+
+    <!-- 密码框 -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <br>
+
+    <!-- 提交按钮 -->
+    <input type="submit" value="Submit">
+
+    <!-- 重置按钮 -->
+    <input type="reset" value="Reset">
+    <br>
+
+    <!-- 隐含框 -->
+    <!-- <input type="hidden" name="hidden" value="hidden-value">
+    <br> -->
+
+    <!-- 文件选择输入框 -->
+    <label for="file">File Input:</label>
+    <input type="file" id="file" name="file">
+    <br>
+
+    <!-- 单选框 -->
+    <label>Radio Buttons:</label>
+    <input type="radio" id="radio1" name="radio" value="option1">
+    <label for="radio1">Option 1</label>
+    <input type="radio" id="radio2" name="radioo" value="option2">
+    <label for="radio2">Option 2</label>
+    <br>
+
+    <!-- 复选框 -->
+    <label>Checkbox:</label>
+    <input type="checkbox" id="checkbox" name="checkbox" value="checked">
+    <label for="checkbox">Check me</label>
+    <br>
+
+    <!-- 图像按钮 -->
+    <input type="image" src="submit_button.png" alt="Submit">
+    <br>
+
+    <!-- 普通按钮 -->
+    <button type="button">Click me</button>
+</form>
+
+</body>
+</html>
